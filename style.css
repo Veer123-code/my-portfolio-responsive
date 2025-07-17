@@ -271,6 +271,11 @@ body {
 }
 
 /* Projects Section */
+.projects-section h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 40px;
+  font-weight: 700;
+}
 .projects-section {
   padding: 80px 20px;
   background-color: #f9f9f9;
@@ -404,157 +409,80 @@ body {
 }
 
 /* From Uiverse.io by Smit-Prajapati */ 
+.card img{
+  width: 100%;
+}
+/* From Uiverse.io by bhaveshxrawat */ 
+/* From Uiverse.io by dylanharriscameron */ 
 .card {
   position: relative;
-  width: 500px;
-  height: 500px;
-  background: lightgrey;
-  border-radius: 30px;
+  width: 200px;
+  height: 250px;
+  border-radius: 14px;
+  z-index: 1111;
   overflow: hidden;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transition: all 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  ;
 }
 
-.background {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 100% 107%, #ff89cc 0%, #9cb8ec 30%, #00ffee 60%, #62c2fe 100%);
-}
-
-.card .logo {
-  position: absolute;
-  right: 50%;
-  bottom: 50%;
-  transform: translate(50%, 50%);
-  transition: all 0.6s ease-in-out;
-}
-
-.card .logo img {
-  fill: white;
-  width: 480px;
-  height: 400px;
-}
-
-.icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-}
-
-.icon .svg {
-  fill: rgba(255, 255, 255, 0.797);
+.bg img{
   width: 100%;
-  transition: all 0.5s ease-in-out;
+  
 }
-
-.box {
+.bg {
   position: absolute;
-  padding: 10px;
-  text-align: right;
-  background: rgba(255, 255, 255, 0.389);
-  border-top: 2px solid rgb(255, 255, 255);
-  border-right: 1px solid white;
-  border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
-  box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
-  transform-origin: bottom left;
-  transition: all 1s ease-in-out;
+  top: 5px;
+  left: 5px;
+  width: 190px;
+  height: 550px;
+  z-index: 2;
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
 }
 
-.box::before {
-  content: "";
+.blob {
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.box:hover .svg {
-  fill: white;
-}
-
-.box1 {
-  width: 70%;
-  height: 70%;
-  bottom: -70%;
-  left: -70%;
-}
-
-.box1::before {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ff53d4 60%, #62c2fe 90%);
-}
-
-.box1:hover::before {
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ff0000;
   opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
 }
 
-.box1:hover .icon .svg {
-  filter: drop-shadow(0 0 5px white);
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
 }
 
-.box2 {
-  width: 50%;
-  height: 50%;
-  bottom: -50%;
-  left: -50%;
-  transition-delay: 0.2s;
-}
-
-.box2::before {
-  background: radial-gradient(circle at 30% 107%, #91e9ff 0%, #00ACEE 90%);
-}
-
-.box2:hover::before {
-  opacity: 1;
-}
-
-.box2:hover .icon .svg {
-  filter: drop-shadow(0 0 5px white);
-}
-
-.box3 {
-  width: 30%;
-  height: 30%;
-  bottom: -30%;
-  left: -30%;
-  transition-delay: 0.4s;
-}
-
-.box3::before {
-  background: radial-gradient(circle at 30% 107%, #969fff 0%, #b349ff 90%);
-}
-
-.box3:hover::before {
-  opacity: 1;
-}
-
-.box3:hover .icon .svg {
-  filter: drop-shadow(0 0 5px white);
-}
-
-.box4 {
-  width: 10%;
-  height: 10%;
-  bottom: -10%;
-  left: -10%;
-  transition-delay: 0.6s;
-}
-
-.card:hover {
-  transform: scale(1.1);
-}
-
-.card:hover .box {
-  bottom: -1px;
-  left: -1px;
-}
-
-.card:hover .logo {
-  transform: translate(0, 0);
-  bottom: 20px;
-  right: 20px;
-}
- 
 
 /* Footer */
 .footer {

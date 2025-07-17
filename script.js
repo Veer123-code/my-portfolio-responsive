@@ -22,3 +22,4 @@ ScrollReveal().reveal('.contact-section', {
   duration: 1000,
   delay: 300,
 });
+
